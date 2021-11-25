@@ -7,4 +7,17 @@ export class CreateNFTInput {
 
   @Field()
   nftimage: string;
+
+  @Field()
+  erc20addr: string;
+
+  @Field()
+  erc20amount: number;
+
+  @Field()
+  collectionaddr: string;
+
+  @Field()
+  ordertype: string;
+
 }
