@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { ConnectionOptions } from "typeorm";
-import { NFT } from "./entity/Nft";
+import { Metadata } from "./entity/Metadata";
 import fs from "fs";
 
 // config
@@ -24,7 +24,7 @@ const clientOps: ClientOptions = {
    database: String(process.env.DB_NAME),
    synchronize: false,
    logging: false,
-   entities: [NFT],
+   entities: [Metadata],
    migrations: [`${process.env.PWD}/db/migrations/*.ts`],
    cli: {
       entitiesDir: `./db/entities`,
